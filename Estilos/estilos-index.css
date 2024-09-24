@@ -1,0 +1,132 @@
+@import url(variables.css);
+
+*{
+    font-family: var(--font-poppins);
+}
+
+/*Navbar*/
+
+.navbar{
+    padding: 3rem 3.5rem;
+    background-color: var(--tertiary-color);
+    font-weight: 500;
+}
+
+.navbar-nav{
+    gap: 20px;
+}
+
+
+/*Hero*/
+
+.container-hero{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.imagen-hero{
+    width: 50%;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 10px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+}
+
+.texto-hero{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 2.5rem;
+}
+
+.titulo{
+    font-size: 75px;
+    font-weight: bold;
+    margin-bottom: 33px;
+    font-family: var(--font-gruppo);
+    color: var(--primary-color);
+    line-height: 60px;
+}
+
+.descripcion{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.boton-1{
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.2s ease-in-out;
+}
+
+.boton-1:hover{
+    background-color: #1463a8;
+}
+
+/*Sobre Nosostros*/
+
+.container-sn{
+    min-width: 1500px;
+    margin-top: 30px;
+    display: flex;
+    background-color: var(--primary-color);
+}
+
+.imagen-sn img{
+    width: 500px;
+    height: auto;
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 800px) {
+    .navbar-collapse{
+        margin-top: 15px;
+    }
+
+    .navbar-toggler{
+        border: none;
+    }
+
+    .navbar-toggler svg{
+        color: var(--primary-color);
+    }
+
+    .container-hero {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .texto-hero {
+        align-items: center;
+    }
+
+    .titulo{
+        text-align: center;
+    }
+
+    .imagen-hero{
+        width: auto;
+    }
+
+}
