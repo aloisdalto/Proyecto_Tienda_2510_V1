@@ -24,13 +24,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 100px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 0 10%;
+    gap: 80px;
 }
 
 .imagen-hero{
     width: 50%;
+    max-width: 600px;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -57,7 +57,7 @@
 }
 
 .titulo{
-    font-size: 75px;
+    font-size: 90px;
     font-weight: bold;
     margin-bottom: 33px;
     font-family: var(--font-gruppo);
@@ -86,15 +86,33 @@
 /*Sobre Nosostros*/
 
 .container-sn{
-    min-width: 1500px;
-    margin-top: 30px;
+    margin-top: 70px;
     display: flex;
+    padding-right: 3.5rem;
     background-color: var(--primary-color);
 }
 
 .imagen-sn img{
-    width: 500px;
-    height: auto;
+    width: 560px;
+    height: 650px;
+}
+
+.texto-sn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 0.5rem 2rem 5.5rem;
+    color: var(--tertiary-color);
+}
+
+.titulo-sn{
+    font-size: 70px;
+    font-family: var(--font-gruppo);
+    font-weight: bold;
+}
+
+.descp-sn{
+    font-size: 20px;
 }
 
 /*Responsive*/
@@ -125,8 +143,21 @@
         text-align: center;
     }
 
-    .imagen-hero{
+    .container-hero{
         width: auto;
     }
 
+    .imagen-hero{
+       width: 100%;
+    }
+
+    .imagen-sn img{
+        display: none;
+    }
+
+    .texto-sn{
+        padding: 0;
+        text-align: center;
+        gap: 50px;
+    }
 }
